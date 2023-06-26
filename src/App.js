@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import AddUser from './Components/Users/AddUser';
 import UsersList from './Components/Users/UsersList';
+//import Wrapper from './Components/Helper/Wrapper';
 
 function App() {
   
@@ -17,11 +18,24 @@ const addUserHandler = (uName, uAge) =>{
   }
 
   return (
-    <div>
+    <React.Fragment>
       <AddUser onAddUsers={addUserHandler}/>
       <UsersList users={usersList}/>
-    </div>
+    </React.Fragment>
   );
 }
 
+
+//Other options to Wrappers are:
+// <> 
+//......
+//......
+//</>
+
+//and 
+
+// <React.Fragment> 
+//......
+//......
+//</React.Fragment>
 export default App;
